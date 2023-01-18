@@ -1,5 +1,6 @@
 import HeroSection from "./components/HeroSection";
 import TwoColumnView from "./components/TwoColumnView";
+import TwoColumnImageView from "./components/TwoColumnImageView";
 
 function App() {
   const twoColumnData = [
@@ -17,13 +18,31 @@ function App() {
       imageUrl: "/images/desktop/image-stand-out.jpg",
       orderReverse: false,
     },
+    {
+      title: "Graphic design",
+      description:
+        "Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.",
+      imageUrl: "/images/desktop/image-graphic-design.jpg",
+      orderReverse: false,
+      textOverImage: true,
+      title2: "Photography",
+      description2:
+        "Increase your credibility by getting the most stunning, high-quality photos that improve your business image.",
+      imageUrl2: "/images/desktop/image-photography.jpg",
+      orderReverse2: false,
+      textOverImage2: true,
+    },
   ];
   return (
     <div className="App">
       <HeroSection />
-      {twoColumnData.map((data, index) => (
-        <TwoColumnView key={index} {...data} />
-      ))}
+      {twoColumnData.map((data, index) =>
+        data.textOverImage ? (
+          <TwoColumnImageView key={index} {...data} />
+        ) : (
+          <TwoColumnView key={index} {...data} />
+        )
+      )}
     </div>
   );
 }

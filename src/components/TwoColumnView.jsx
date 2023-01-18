@@ -22,8 +22,8 @@ const TwoColumnView = (props) => {
         <p className="mt-8">{description}</p>
         <button
           className="learn-more-btn mt-8
-        font-serif font-extrabold uppercase
-        before:bg-primary-yellow"
+            font-serif font-extrabold uppercase
+            before:bg-primary-yellow"
         >
           Learn more
         </button>
