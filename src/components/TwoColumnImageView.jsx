@@ -2,10 +2,14 @@ import React from "react";
 
 const SingleColumnView = (props) => {
   const { imageUrl, title, description, textColor } = props;
+  // replace desktop in imageUrl with mobile
+  const mobileImageUrl = imageUrl.replace("desktop", "mobile");
+  // if window width is less than 768px, use mobileImageUrl
+  const image = window.innerWidth < 768 ? mobileImageUrl : imageUrl;
   return (
     <div className="relative  col-span-2 md:col-span-1">
       <img
-        src={`${process.env.PUBLIC_URL}${imageUrl}`}
+        src={`${process.env.PUBLIC_URL}${image}`}
         alt=""
         className="w-full object-cover"
       />

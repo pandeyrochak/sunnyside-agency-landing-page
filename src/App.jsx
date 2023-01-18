@@ -3,6 +3,7 @@ import TwoColumnView from "./components/TwoColumnView";
 import TwoColumnImageView from "./components/TwoColumnImageView";
 import ImagesGrid from "./components/ImagesGrid";
 import Footer from "./components/Footer";
+import Testimonials from "./components/Testimonials";
 
 function App() {
   const twoColumnData = [
@@ -41,6 +42,29 @@ function App() {
     "/images/desktop/image-gallery-cone.jpg",
     "/images/desktop/image-gallery-sugarcubes.jpg",
   ];
+  const testimonialsList = [
+    {
+      name: "Michelle Appleton",
+      role: "Chief Executive Officer",
+      description:
+        "We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.",
+      imageUrl: "/images/image-emily.jpg",
+    },
+    {
+      name: "Thomas S.",
+      role: "Chief Operating Officer",
+      description:
+        "Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.",
+      imageUrl: "/images/image-thomas.jpg",
+    },
+    {
+      name: "Jennie F.",
+      role: "Business Owner",
+      description:
+        "Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!",
+      imageUrl: "/images/image-jennie.jpg",
+    },
+  ];
   return (
     <div className="App">
       <HeroSection />
@@ -51,6 +75,7 @@ function App() {
           <TwoColumnView key={index} {...data} />
         )
       )}
+      <Testimonials testimonialsList={testimonialsList} />
       <ImagesGrid imagesArray={imagesArray} />
       <Footer />
     </div>
