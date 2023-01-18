@@ -1,6 +1,8 @@
 import HeroSection from "./components/HeroSection";
 import TwoColumnView from "./components/TwoColumnView";
 import TwoColumnImageView from "./components/TwoColumnImageView";
+import ImagesGrid from "./components/ImagesGrid";
+import Footer from "./components/Footer";
 
 function App() {
   const twoColumnData = [
@@ -33,6 +35,12 @@ function App() {
       textOverImage2: true,
     },
   ];
+  const imagesArray = [
+    "/images/desktop/image-gallery-milkbottles.jpg",
+    "/images/desktop/image-gallery-orange.jpg",
+    "/images/desktop/image-gallery-cone.jpg",
+    "/images/desktop/image-gallery-sugarcubes.jpg",
+  ];
   return (
     <div className="App">
       <HeroSection />
@@ -43,6 +51,8 @@ function App() {
           <TwoColumnView key={index} {...data} />
         )
       )}
+      <ImagesGrid imagesArray={imagesArray} />
+      <Footer />
     </div>
   );
 }
