@@ -19,8 +19,24 @@ code {
   font-family: "Barlow", sans-serif;
 }
 /* hero section */
-header{
-  background-image: url('../public/images/desktop/image-header.jpg');
+header {
+  background-image: url("../public/images/desktop/image-header.jpg");
   background-size: cover;
   background-position: center;
+}
+.learn-more-btn {
+  position: relative;
+  width: fit-content;
+  
+}
+.learn-more-btn::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -5px;
+  width: calc(100% + 10px);
+  height: 10px;
+  border-radius: 0.25rem;
+  z-index: -10;
+  opacity: 0.7;
 }
