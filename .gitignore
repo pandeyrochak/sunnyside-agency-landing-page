@@ -16,3 +16,4 @@
 .prettierignore
 design
 sunnyside-agency-landing-page-main
+node_modules
