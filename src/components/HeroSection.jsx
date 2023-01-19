@@ -1,23 +1,55 @@
-import React from "react";
+import React, { useState } from "react";
 
 const HeroSection = () => {
+  const [showMobileNav, setshowMobileNav] = useState(false);
+  const handleMobileNav = () => {
+    setshowMobileNav(!showMobileNav);
+  };
+
   return (
-    <header className="w-full text-white h-screen">
-      <nav className="container flex content-center justify-between py-4 px-4 md:px-0">
+    <header className="h-screen w-full text-white">
+      <nav className="container relative flex content-center justify-between py-4 px-4 md:px-0">
         <div className="font-semibold">sunnyside</div>
-        <div className="content-center gap-8 hidden md:flex">
-          <ul className="flex content-center gap-4 flex-wrap">
+        {/* desktop navigation */}
+        <div className="hidden content-center gap-8 md:flex">
+          <ul className="flex flex-wrap content-center gap-4">
             <li className="h-fit">About</li>
             <li className="h-fit">Services</li>
             <li className="h-fit">Projects</li>
           </ul>
-          <button className="uppercase bg-white text-black rounded-full px-4 py-1 font-serif text-xs">
+          <button className="rounded-full bg-white px-4 py-1 font-serif text-xs uppercase text-black">
+            contact
+          </button>
+        </div>
+        <div
+          className={`block cursor-pointer md:hidden`}
+          onClick={handleMobileNav}
+        >
+          <img
+            src={`${process.env.PUBLIC_URL}/images/icon-hamburger.svg`}
+            alt=""
+          />
+        </div>
+        {/* mobile navigation */}
+        <div
+          className={`absolute top-full left-1/2 block w-5/6 translate-y-2 -translate-x-1/2 bg-white p-8 text-center text-xs text-neutral-dark-blue md:hidden ${
+            showMobileNav ? "block" : "hidden"
+          }`}
+        >
+          <div className="absolute -top-3.5 -right-3.5 h-7 w-7 rotate-45 bg-white"></div>
+          <div className="absolute -top-5 -right-10 h-10 w-10 bg-primary-sky-blue"></div>
+          <ul className="flex flex-col flex-wrap content-center gap-4">
+            <li className="h-fit">About</li>
+            <li className="h-fit">Services</li>
+            <li className="h-fit">Projects</li>
+          </ul>
+          <button className="mt-6 rounded-full bg-primary-yellow px-4 py-1 font-serif text-xs font-bold uppercase text-black">
             contact
           </button>
         </div>
       </nav>
-      <div className="absolute left-1/2 top-1/3 -translate-x-1/2 flex flex-col justify-center items-center">
-        <h1 className="uppercase text-center text-4xl font-serif font-bold">
+      <div className="absolute left-1/2 top-1/3 flex -translate-x-1/2 flex-col items-center justify-center">
+        <h1 className="text-center font-serif text-4xl font-bold uppercase">
           we are creatives
         </h1>
         <img

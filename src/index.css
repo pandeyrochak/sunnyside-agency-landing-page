@@ -27,7 +27,6 @@ header {
 .learn-more-btn {
   position: relative;
   width: fit-content;
-  
 }
 .learn-more-btn::before {
   content: "";

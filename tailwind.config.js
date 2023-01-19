@@ -10,6 +10,7 @@ module.exports = {
           "desaturated-cyan": "hsl(167, 40%, 24%)",
           blue: "hsl(198, 62%, 26%)",
           "moderate-cyan": "hsl(167, 44%, 70%)",
+          "sky-blue": "#3ebfff",
         },
         neutral: {
           "dark-blue": "hsl(212, 27%, 19%)",
