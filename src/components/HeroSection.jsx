@@ -13,11 +13,11 @@ const HeroSection = () => {
         {/* desktop navigation */}
         <div className="hidden content-center gap-8 md:flex">
           <ul className="flex flex-wrap content-center gap-4">
-            <li className="h-fit">About</li>
-            <li className="h-fit">Services</li>
-            <li className="h-fit">Projects</li>
+            <li className="h-fit cursor-pointer border-b-2 border-b-transparent hover:border-b-2 hover:border-b-white">About</li>
+            <li className="h-fit cursor-pointer border-b-2 border-b-transparent hover:border-b-2 hover:border-b-white">Services</li>
+            <li className="h-fit cursor-pointer border-b-2 border-b-transparent hover:border-b-2 hover:border-b-white">Projects</li>
           </ul>
-          <button className="rounded-full bg-white px-4 py-1 font-serif text-xs uppercase text-black">
+          <button className="rounded-full bg-white px-4 py-2 font-serif text-xs uppercase text-black hover:bg-opacity-40 hover:text-white">
             contact
           </button>
         </div>
@@ -49,13 +49,13 @@ const HeroSection = () => {
         </div>
       </nav>
       <div className="absolute left-1/2 top-1/3 flex -translate-x-1/2 flex-col items-center justify-center">
-        <h1 className="text-center font-serif text-4xl font-bold uppercase">
+        <h1 className="text-center font-serif text-4xl font-bold uppercase lg:text-6xl">
           we are creatives
         </h1>
         <img
           src={`${process.env.PUBLIC_URL}/images/icon-arrow-down.svg`}
           alt=""
-          className="mt-16"
+          className="mt-16 animate-bounce-slow"
         />
       </div>
     </header>

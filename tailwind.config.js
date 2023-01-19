@@ -28,6 +28,10 @@ module.exports = {
       container: {
         center: true,
       },
+      animation: {
+        "bounce-slow": "bounce 1s linear infinite",
+        "ping-slow": "ping 1s cubic-bezier(0, 0, 0.2, 1) infinite",
+      },
     },
   },
   plugins: [],
