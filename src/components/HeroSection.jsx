@@ -13,9 +13,15 @@ const HeroSection = () => {
         {/* desktop navigation */}
         <div className="hidden content-center gap-8 md:flex">
           <ul className="flex flex-wrap content-center gap-4">
-            <li className="h-fit cursor-pointer border-b-2 border-b-transparent hover:border-b-2 hover:border-b-white">About</li>
-            <li className="h-fit cursor-pointer border-b-2 border-b-transparent hover:border-b-2 hover:border-b-white">Services</li>
-            <li className="h-fit cursor-pointer border-b-2 border-b-transparent hover:border-b-2 hover:border-b-white">Projects</li>
+            <li className="h-fit cursor-pointer border-b-2 border-b-transparent hover:border-b-2 hover:border-b-white">
+              About
+            </li>
+            <li className="h-fit cursor-pointer border-b-2 border-b-transparent hover:border-b-2 hover:border-b-white">
+              Services
+            </li>
+            <li className="h-fit cursor-pointer border-b-2 border-b-transparent hover:border-b-2 hover:border-b-white">
+              Projects
+            </li>
           </ul>
           <button className="rounded-full bg-white px-4 py-2 font-serif text-xs uppercase text-black hover:bg-opacity-40 hover:text-white">
             contact

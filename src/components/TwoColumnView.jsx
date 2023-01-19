@@ -2,7 +2,7 @@ import React from "react";
 
 const TwoColumnView = (props) => {
   // destructuring props
-  const { imageUrl, title, description, orderReverse } = props;
+  const { imageUrl, title, description, orderReverse, linkColor } = props;
 
   return (
     <div className="grid w-full grid-cols-2">
@@ -21,9 +21,12 @@ const TwoColumnView = (props) => {
         <h3 className="font-serif text-4xl font-extrabold">{title}</h3>
         <p className="mt-8">{description}</p>
         <button
-          className="learn-more-btn mt-8
+          className={`learn-more-btn mt-8
             font-serif font-extrabold uppercase
-            before:bg-primary-yellow"
+            transition-all duration-300 ease-in-out
+            before:bg-primary-yellow
+            hover:before:h-full
+            `}
         >
           Learn more
         </button>
