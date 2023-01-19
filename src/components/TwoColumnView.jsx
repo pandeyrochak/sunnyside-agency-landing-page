@@ -2,7 +2,7 @@ import React from "react";
 
 const TwoColumnView = (props) => {
   // destructuring props
-  const { imageUrl, title, description, orderReverse, linkColor } = props;
+  const { imageUrl, title, description, orderReverse } = props;
 
   return (
     <div className="grid w-full grid-cols-2">
